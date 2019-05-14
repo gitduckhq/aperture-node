@@ -39,6 +39,7 @@ class Aperture {
     screenId = 0,
     audioDeviceId = undefined,
     videoCodec = undefined,
+    movieFragmentInterval = undefined,
     destinationPath = undefined
   } = {}) {
     return new Promise((resolve, reject) => {
@@ -69,6 +70,7 @@ class Aperture {
         showCursor,
         highlightClicks,
         screenId,
+        movieFragmentInterval,
         audioDeviceId
       };
 

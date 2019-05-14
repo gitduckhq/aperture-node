@@ -11,6 +11,7 @@ struct Options: Decodable {
   let screenId: CGDirectDisplayID
   let audioDeviceId: String?
   let videoCodec: String?
+  let movieFragmentInterval: Int64?
 }
 
 func record() throws {
@@ -24,6 +25,7 @@ func record() throws {
     highlightClicks: options.highlightClicks,
     screenId: options.screenId == 0 ? .main : options.screenId,
     audioDevice: options.audioDeviceId != nil ? AVCaptureDevice(uniqueID: options.audioDeviceId!) : nil,
+    movieFragmentInterval: options.movieFragmentInterval,
     videoCodec: options.videoCodec
   )
 
