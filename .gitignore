@@ -3,4 +3,4 @@ yarn.lock
 /.build
 /Packages
 /*.xcodeproj
-/aperture
+#/aperture
